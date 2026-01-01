@@ -26,11 +26,6 @@ The implementation focuses on **real-time communication**, **audio streaming**, 
 - Eye blinking and subtle gaze movement
 - Avatar reacts to both user speech and assistant responses
 
-### ✅ Lip Sync & Facial Motion
-- Audio-level driven mouth animation
-- Smooth interpolation for natural movement
-- Shared animation pipeline for user and assistant audio
-
 ### ✅ Live Captions / Subtitles
 - **User captions** via browser Speech Recognition API
 - **Assistant captions** via OpenAI Realtime text output
