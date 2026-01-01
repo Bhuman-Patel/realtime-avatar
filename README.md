@@ -70,3 +70,6 @@ project/
 ## Instruction to Run
 - npm install
 - node server.js
+
+<img width="1044" height="658" alt="Screenshot 2026-01-01 at 3 35 30 AM" src="https://github.com/user-attachments/assets/f19d2b5a-2497-4b73-ab7d-0155601c6440" />
+
