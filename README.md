@@ -68,5 +68,5 @@ project/
 
 
 ## Instruction to Run
-npm install
-node server.js
+- npm install
+- node server.js
