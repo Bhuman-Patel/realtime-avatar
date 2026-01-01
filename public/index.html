@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Realtime Web Avatar Assistant</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="data:," />
+
+</head>
+<body>
+  <div class="wrap">
+    <h2 class="title">Realtime Web Avatar Assistant</h2>
+
+    <div class="row">
+      <button id="connectBtn">Connect</button>
+      <!-- <button id="speakerBtn" class="secondary">Test Speaker (beep)</button> -->
+      <button id="disconnectBtn" class="secondary" disabled>Disconnect</button>
+      <!-- <button id="testBtn" class="secondary" disabled>Send test prompt (forces reply)</button> -->
+      <!-- <span class="hint">Tip: Click Connect → allow mic → speak. If no reply, click “Send test prompt”.</span> -->
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Avatar</h3>
+
+        <div class="stage">
+          <canvas id="avatar" width="420" height="420"></canvas>
+        </div>
+
+        <div class="subs">
+          <div><b>You :</b> <span id="userSub">—</span></div>
+          <div><b>Assistant :</b> <span id="asstSub">—</span></div>
+        </div>
+
+        <audio id="assistantAudio" autoplay playsinline></audio>
+      </div>
+
+      <div class="card">
+        <h3>Audio + WebRTC Status</h3>
+
+        <div class="kv">
+          <div>Mic level</div>
+          <div>
+            <div class="meter"><div id="micBar"></div></div>
+            <div class="mono" id="micLevel">—</div>
+          </div>
+
+          <div>Assistant audio</div>
+          <div>
+            <div class="meter"><div id="asstBar"></div></div>
+            <div class="mono" id="asstStatus">waiting</div>
+          </div>
+
+          <!-- <div>PC state</div><div class="mono" id="pcState">—</div>
+          <div>ICE state</div><div class="mono" id="iceState">—</div>
+          <div>DC state</div><div class="mono" id="dcState">—</div> -->
+        </div>
+
+        <h3 class="mt">Event log</h3>
+        <pre id="log" class="log">—</pre>
+      </div>
+    </div>
+
+    <footer>
+      <p>Built with 🧡 using WebRTC + OpenAI Realtime API</p>
+    </footer>
+  </div>
+
+  <!-- Modules -->
+  <script type="module" src="/lipsync.js"></script>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
