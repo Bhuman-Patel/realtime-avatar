@@ -49,6 +49,7 @@ The implementation focuses on **real-time communication**, **audio streaming**, 
 ---
 
 ## Project Structure
+```
 project/
 ├── public/
 │ ├── index.html # UI layout
@@ -63,6 +64,7 @@ project/
 ├── server.js # Express server + OpenAI Realtime API
 ├── .env # Environment variables
 └── README.md
+```
 
 
 ## Instruction to Run
