@@ -1,4 +1,3 @@
-// public/app.js
 import { initWebRTC, closeWebRTC } from "./webrtc.js";
 
 const logEl = document.getElementById("log");

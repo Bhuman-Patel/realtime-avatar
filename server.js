@@ -1,4 +1,3 @@
-// server.js
 import "dotenv/config";
 import express from "express";
 import { fetch, FormData } from "undici";
@@ -16,6 +15,7 @@ function withTimeout(ms) {
   return { controller, clear: () => clearTimeout(t) };
 }
 
+// validating API key
 app.post("/session", express.text({ type: ["application/sdp", "text/plain"] }), async (req, res) => {
   try {
     const apiKey = process.env.OPENAI_API_KEY;
@@ -26,8 +26,7 @@ app.post("/session", express.text({ type: ["application/sdp", "text/plain"] }), 
       return res.status(400).json({ error: "missing_sdp", message: "Missing SDP offer (body must be SDP text)" });
     }
 
-    // IMPORTANT: force stable model unless you explicitly override it
-    // Try "gpt-realtime" first (docs example), and only then try mini.
+    // version specifying model and voice
     const model = process.env.REALTIME_MODEL || "gpt-realtime";
     const voice = process.env.REALTIME_VOICE || "marin";
 
@@ -91,4 +90,3 @@ app.post("/session", express.text({ type: ["application/sdp", "text/plain"] }), 
 });
 
 app.listen(PORT, () => console.log(`server running → http://localhost:${PORT}`));
-  

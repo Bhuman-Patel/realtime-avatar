@@ -1,4 +1,3 @@
-// public/webrtc.js
 import { exchangeSDP } from "./openai.js";
 import { setupMic, monitorAudio } from "./audio.js";
 import { drawAvatarFromLevels } from "./lipsync.js";

@@ -1,4 +1,3 @@
-// public/lipsync.js
 const canvas = document.getElementById("avatar");
 const ctx = canvas.getContext("2d");
 
